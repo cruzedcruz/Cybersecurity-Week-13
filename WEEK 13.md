@@ -56,23 +56,23 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 | 10.0.0.1 10.0.0.2    |
-|ELK-server|  No                 |                      |
+| Jump Box | Yes                 | Your IP address      |
+|ELK-server|  No                 |   10.0.0.1-254       |
 | Web-1    |  No                 |   10.0.0.1-254       |
-| Web-2    |No                   |    10.0.0.1-254      | 
-| web-3A   |NO                   |    10.0.0.1-254      |
+| Web-2    |  No                 |    10.0.0.1-254      | 
+| web-3A   |  No                 |    10.0.0.1-254      |
 
 
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_ frees the user to focus on efforts that help deliver more value to the business by spending time on more important tasks
+- What is the main advantage of automating configuration with Ansible? Frees the user to focus on efforts that help deliver more value to the business by spending time on more important tasks
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 - Log into your jumpbox
 - Create an Ansible playbook that installs Docker and configures an ELK container.
- - Run the playbook to launch the container' ansible-playbook install_elk.yml.elk
+ - Run the playbook to launch the container 'ansible-playbook install_elk.yml'
   
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
@@ -81,6 +81,60 @@ The following screenshot displays the result of running `docker ps` after succes
 
 
 ![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+The playbook is duplicated below.
+
+```yaml
+---
+# install_elk.yml
+- name: Configure Elk VM with Docker
+  hosts: elkservers
+  remote_user: elk
+  become: true
+  tasks:
+    # Use apt module
+    - name: Install docker.io
+      apt:
+        update_cache: yes
+        name: docker.io
+        state: present
+
+      # Use apt module
+    - name: Install pip3
+      apt:
+        force_apt_get: yes
+        name: python3-pip
+        state: present
+
+      # Use pip module
+    - name: Install Docker python module
+      pip:
+        name: docker
+        state: present
+
+      # Use command module
+    - name: Increase virtual memory
+      command: sysctl -w vm.max_map_count=262144
+
+      # Use sysctl module
+    - name: Use more memory
+      sysctl:
+        name: vm.max_map_count
+        value: "262144"
+        state: present
+        reload: yes
+
+      # Use docker_container module
+    - name: download and launch a docker elk container
+      docker_container:
+        name: elk
+        image: sebp/elk:761
+        state: started
+        restart_policy: always
+        published_ports:
+          - 5601:5601
+          - 9200:9200
+          - 5044:5044
+```
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -88,26 +142,58 @@ This ELK server is configured to monitor the following machines:
 WEB- 1, web-2 and web-3A at 10.0.0.4, 10.0.0.5 and 10.0.0.10. 
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
 -Filebeat
-Metricbeat
+-Metricbeat
+-Packetbeat
 
-These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+These Beats allow us to collect the following information from each machine: 
  Filebeat monitors the log files or locations {from the VM}, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
 **Filebeat**: Filebeat detects changes to the filesystem. Specifically, we use it to collect Apache logs.
 - **Metricbeat**: Metricbeat detects changes in system metrics, such as CPU usage. We use it to detect SSH login attempts, failed `sudo` escalations, and CPU/RAM statistics.
-- 
-Metricbeat periodically collect metrics from the operating system and from services running on the server. (ELK Server)
 
+Metricbeat periodically collect metrics from the operating system and from services running on the server. (ELK Server)
+The playbook below installs Metricbeat on the target hosts. The playbook for installing Filebeat is not included, but looks essentially identical — simply replace `metricbeat` with `filebeat`, and it will work as expected.
+
+```yaml
+---
+- name: Install metric beat
+  hosts: webservers
+  become: true
+  tasks:
+    # Use command module
+  - name: Download metricbeat
+    command: curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.4.0-amd64.deb
+
+    # Use command module
+  - name: install metricbeat
+    command: dpkg -i metricbeat-7.4.0-amd64.deb
+
+    # Use copy module
+  - name: drop in metricbeat config
+    copy:
+      src: /etc/ansible/files/metricbeat-config.yml
+      dest: /etc/metricbeat/metricbeat.yml
+
+    # Use command module
+  - name: enable and configure docker module for metric beat
+    command: metricbeat modules enable docker
+
+    # Use command module
+  - name: setup metric beat
+    command: metricbeat setup
+
+    # Use command module
+  - name: start metric beat
+    command: service metricbeat start
+```
 
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the ___playbook_ file to the ansible control node_____.
-- Update the _hosts____ file to include..webservers..
+- Copy the playbook file to the ansible control node.
+- Update the hosts file to include webservers and elk
 
 
 - Run the playbook, and navigate to "__kiana address by using the curl command__http://[your ip address]:5601" to check that the installation worked as expected.
