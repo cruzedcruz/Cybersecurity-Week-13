@@ -46,7 +46,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the _jumpbox__ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: XX.215.XXX.XXX or your ip address. ( to see your ip address go to whatismyipaddress.com) 
+- _TODO: XX.215.XXX.XXX or your ip address. [o see your ip address](http://whatismyipaddress.com) 
 
 Machines within the network can only be accessed by each other.
 - _TODO: Which machine did you allow to access your ELK VM? Web-1, Web-2 and Web 3A
