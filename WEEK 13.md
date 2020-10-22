@@ -209,7 +209,7 @@ $ cp Cybersecurity-Week-13/playbooks/* .
 
 This copies the playbook files to the correct place.
 
-Next, you must create a hosts file to specify which VMs to run each playbook on. 
+Next, you must create a [host file](https://github.com/cruzedcruz/Cybersecurity-Week-13/blob/main/Linux/Host.PNG) to specify which VMs to run each playbook on. 
 
 Run the commands below:
 
