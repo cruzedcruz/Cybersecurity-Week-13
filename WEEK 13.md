@@ -4,11 +4,11 @@ The files in this repository were used to configure the network depicted below.
 
 **Note**: The following image link needs to be updated. Replace `diagram_filename.png` with the name of your diagram image file.  
 
-Images/WEEK 13 Diagram.png
+Diagrams/WEEK 13 Diagram.png
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the __playbook___ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-  Images/filebeat.yml
+  Ansible/filebeat.yml
 
 This document contains the following details:
 - Description of the Topologu
@@ -25,7 +25,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly _available____, in addition to restricting ___inbound access__ to the network.
 - _TODO: What aspect of security do load balancers protect?     It does this by shifting attack traffic from the corporate server to a public cloud provider.
-What is the advantage of a jump box?_ The advantage of a jump box is it’s a  hardened and monitored device that spans two dissimilar security zones and provides a controlled means of access between them.
+What is the advantage of a jump box?_ The advantage of a jump box is itâ€™s a  hardened and monitored device that spans two dissimilar security zones and provides a controlled means of access between them.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the ___file systems_ and system __performance_or metrics_.
 - _TODO: What does Filebeat watch for?_filebeat watches log files and collects data for any suspicious changes.
