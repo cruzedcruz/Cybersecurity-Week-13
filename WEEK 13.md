@@ -4,11 +4,11 @@ The files in this repository were used to configure the network depicted below.
 
 **Note**: The following image link needs to be updated. Replace `diagram_filename.png` with the name of your diagram image file.  
 
-![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
+Images/WEEK 13 Diagram.png
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the __playbook___ file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._( filebeat.yml)
+  Images/filebeat.yml
 
 This document contains the following details:
 - Description of the Topologu
@@ -48,7 +48,7 @@ The machines on the internal network are not exposed to the public Internet.
 Only the _jumpbox__ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - _TODO: XX.215.XXX.XXX or your ip address. ( to see your ip address go to whatismyipaddress.com) 
 
-Machines within the network can only be accessed by __each other__.
+Machines within the network can only be accessed by each other.
 - _TODO: Which machine did you allow to access your ELK VM? Web-1, Web-2 and Web 3A
 What was its IP address? 10.1.0.4
 
