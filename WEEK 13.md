@@ -1,9 +1,7 @@
 ## Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
-
-**Note**: The following image link needs to be updated. Replace `diagram_filename.png` with the name of your diagram image file.  
-
+ 
 [WEEK 13 Diagram.png](https://github.com/cruzedcruz/Cybersecurity-Week-13/blob/main/Diagrams/WEEK%2013%20Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
@@ -11,19 +9,18 @@ These files have been tested and used to generate a live ELK deployment on Azure
   [filebeat.yml](https://github.com/cruzedcruz/Cybersecurity-Week-13/blob/main/Ansible/filebeat.yml.PNG)
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
   - Machines Being Monitored
 - How to Use the Ansible Build
 
-
 ### Description of the Topology
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _available____, in addition to restricting ___inbound access__ to the network.
+Load balancing ensures that the application will be highly available, in addition to restricting inbound access to the network.
 - _TODO: What aspect of security do load balancers protect?     It does this by shifting attack traffic from the corporate server to a public cloud provider.
 What is the advantage of a jump box?_ The advantage of a jump box is it’s a  hardened and monitored device that spans two dissimilar security zones and provides a controlled means of access between them.
 
