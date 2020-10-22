@@ -24,17 +24,16 @@ Load balancing ensures that the application will be highly available, in additio
 <<<<<<< HEAD
 - The aspect of security that load balancers protect is by shifting attack traffic from the corporate server to a public cloud provider.
 - The advantage of a jump box is it’s a hardened and monitored device that spans two dissimilar security zones and provides a controlled means of access between them.
-=======
-- _TODO: What aspect of security do load balancers protect?     It does this by shifting attack traffic from the corporate server to a public cloud provider.
-What is the advantage of a jump box?_ The advantage of a jump box is it’s a  hardened and monitored device that spans two dissimilar security zones and provides a controlled means of access between them.
->>>>>>> f18221161c75ab67559c2ea78b063c227fd36864
+
+- The aspect of security that load balancers protect are by shifting the attack traffic from the corporate server to a public cloud provider.
+-The advantage of a jump box is it’s a  hardened and monitored device that spans two dissimilar security zones and provides a controlled means of access between them.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file systems and system performance or metrics.
-- _ What does Filebeat watch for?_filebeat watches log files and collects data for any suspicious changes.
-- _TODO: What does Metricbeat record? Records metrics from the operating system and collect specific information about the machines in the network
+- Filebeat watches log files and collects data for any suspicious changes.
+- Records metrics from the operating system and collect specific information about the machines in the network
 The configuration details of each machine may be found below.
 
-*Please note: IP ADDRESS will be different on your machine. CHeck the private IP address on your machines once their created.*
+*Please note: IP ADDRESS will be different on your machine. Check the private IP address on your machines once their created.*
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
@@ -192,7 +191,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the playbook file to the ansible control node.
 - Update the hosts file to include webservers and elk
-- - Run each playbook on the appropriate targets
+- Run each playbook on the appropriate targets
 
 The easiest way to copy the playbooks is to use Git:
 
@@ -204,10 +203,9 @@ $ git clone https://github.com/cruzedcruz/Cybersecurity-Week-13.git
 # Move Playbooks and hosts file Into `/etc/ansible`
 $ cp Cybersecurity-Week-13/playbooks/* .
 
-
 This copies the playbook files to the correct place.
 
-Next, you must create a `hosts` file to specify which VMs to run each playbook on. Run the commands below:
+Next, you must create a `[hosts](https://github.com/cruzedcruz/Cybersecurity-Week-13/blob/main/Linux/Host.PNG)` file to specify which VMs to run each playbook on. Run the commands below:
 
 ```bash
 $ cd /etc/ansible
@@ -235,7 +233,7 @@ To verify success, wait five minutes to give ELK time to start up.
 
 - Run the playbook, and navigate to the Kibana address run: `curl http://10.0.0.8:5601`. This is the address of Kibana. If the installation succeeded, this command should print HTML to the console. to check that the installation worked as expected.
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+**REMEMBER**
 
 First 'cd /etc/ansible' to the play book
 To install elk run 'ansible-playbook install_elk.yml' in the ansible file
