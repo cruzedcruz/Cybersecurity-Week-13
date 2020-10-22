@@ -67,8 +67,7 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
--It frees the user to focus on efforts that help deliver more value to the business by spending time on more important tasks
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it frees the user to focus on efforts that help deliver more value to the business by spending time on more important tasks
 
 The playbook implements the following tasks:
 - Log into your jumpbox
@@ -79,6 +78,8 @@ The playbook implements the following tasks:
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 [docker ps output](https://github.com/cruzedcruz/Cybersecurity-Week-13/blob/main/Linux/Docker%20ps%20elk%20server.PNG)
+
+***remember to run sudo**
 
 The playbook is duplicated below.
 
@@ -137,7 +138,9 @@ The playbook is duplicated below.
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-WEB- 1, web-2 and web-3A at 10.0.0.4, 10.0.0.5 and 10.0.0.10. 
+WEB- 1, web-2 and web-3A at 10.0.0.4, 10.0.0.5 and 10.0.0.10 respectively. 
+
+***Remember that the ip addresses will be different on your machines!!!***
 
 We have installed the following Beats on these machines:
 -Filebeat
@@ -202,6 +205,7 @@ $ mkdir files
 $ git clone https://github.com/cruzedcruz/Cybersecurity-Week-13.git
 # Move Playbooks and hosts file Into `/etc/ansible`
 $ cp Cybersecurity-Week-13/playbooks/* .
+```
 
 This copies the playbook files to the correct place.
 
