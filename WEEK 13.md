@@ -4,11 +4,11 @@ The files in this repository were used to configure the network depicted below.
 
 **Note**: The following image link needs to be updated. Replace `diagram_filename.png` with the name of your diagram image file.  
 
-(/Diagrams/[WEEK 13 Diagram.png])
+(WEEK 13 Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-  Ansible/filebeat.yml
+  (Ansible/filebeat.yml)
 
 This document contains the following details:
 - Description of the Topologu
