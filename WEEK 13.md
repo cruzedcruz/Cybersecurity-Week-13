@@ -4,7 +4,7 @@ The files in this repository were used to configure the network depicted below.
 
 **Note**: The following image link needs to be updated. Replace `diagram_filename.png` with the name of your diagram image file.  
 
-/Cybersecurity-Week-13/Diagrams/WEEK 13 Diagram.png
+[Network Diagram](/Cybersecurity-Week-13/Diagrams/WEEK 13 Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -46,7 +46,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the _jumpbox__ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: XX.215.XXX.XXX or your ip address. [o see your ip address](http://whatismyipaddress.com) 
+- _TODO: XX.215.XXX.XXX or your ip address. [to see your ip address](http://whatismyipaddress.com) 
 
 Machines within the network can only be accessed by each other.
 - _TODO: Which machine did you allow to access your ELK VM? Web-1, Web-2 and Web 3A
