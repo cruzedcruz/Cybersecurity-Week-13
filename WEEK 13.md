@@ -46,7 +46,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the _jumpbox__ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: XX.215.XXX.XXX or your ip address. [to see your ip address](http://whatismyipaddress.com) 
+- _TODO: XX.215.XXX.XXX or your ip address. [CHeck you ip address](http://whatismyipaddress.com) 
 
 Machines within the network can only be accessed by each other.
 - _TODO: Which machine did you allow to access your ELK VM? Web-1, Web-2 and Web 3A
@@ -77,10 +77,8 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-**Note**: The following image link needs to be updated. Replace `docker_ps_output.png` with the name of your screenshot image file.  
+[docker ps output](https://github.com/cruzedcruz/Cybersecurity-Week-13/blob/main/Linux/Docker%20ps%20elk%20server.PNG)
 
-
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
 The playbook is duplicated below.
 
 ```yaml
