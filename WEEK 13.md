@@ -4,11 +4,11 @@ The files in this repository were used to configure the network depicted below.
 
 **Note**: The following image link needs to be updated. Replace `diagram_filename.png` with the name of your diagram image file.  
 
-Diagrams/WEEK 13 Diagram.png
+[WEEK 13 Diagram.png](https://github.com/cruzedcruz/Cybersecurity-Week-13/blob/main/Diagrams/WEEK%2013%20Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-  Ansible/filebeat.yml
+  [filebeat.yml](https://github.com/cruzedcruz/Cybersecurity-Week-13/blob/main/Ansible/filebeat.yml.PNG)
 
 This document contains the following details:
 - Description of the Topologu
@@ -46,7 +46,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the _jumpbox__ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: XX.215.XXX.XXX or your ip address. ( to see your ip address go to whatismyipaddress.com) 
+- _TODO: XX.215.XXX.XXX or your ip address. [to see your ip address](http://whatismyipaddress.com) 
 
 Machines within the network can only be accessed by each other.
 - _TODO: Which machine did you allow to access your ELK VM? Web-1, Web-2 and Web 3A
@@ -138,7 +138,6 @@ The playbook is duplicated below.
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
 WEB- 1, web-2 and web-3A at 10.0.0.4, 10.0.0.5 and 10.0.0.10. 
 
 We have installed the following Beats on these machines:
