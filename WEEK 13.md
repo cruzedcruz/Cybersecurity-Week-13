@@ -21,7 +21,6 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting inbound access to the network.
-<<<<<<< HEAD
 - The aspect of security that load balancers protect is by shifting attack traffic from the corporate server to a public cloud provider.
 - The advantage of a jump box is it’s a hardened and monitored device that spans two dissimilar security zones and provides a controlled means of access between them.
 
@@ -30,7 +29,8 @@ Load balancing ensures that the application will be highly available, in additio
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file systems and system performance or metrics.
 - Filebeat watches log files and collects data for any suspicious changes.
-- Records metrics from the operating system and collect specific information about the machines in the network
+- Records metrics from the operating system and collect specific information about the machines in the network.
+
 The configuration details of each machine may be found below.
 
 *Please note: IP ADDRESS will be different on your machine. Check the private IP address on your machines once their created.*
@@ -205,7 +205,9 @@ $ cp Cybersecurity-Week-13/playbooks/* .
 
 This copies the playbook files to the correct place.
 
-Next, you must create a `[hosts](https://github.com/cruzedcruz/Cybersecurity-Week-13/blob/main/Linux/Host.PNG)` file to specify which VMs to run each playbook on. Run the commands below:
+#Next, you must create a `[hosts](https://github.com/cruzedcruz/Cybersecurity-Week-13/blob/main/Linux/Host.PNG)` file to specify which VMs to run each playbook on.#
+
+Run the commands below:
 
 ```bash
 $ cd /etc/ansible
