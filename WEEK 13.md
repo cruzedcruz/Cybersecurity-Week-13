@@ -242,7 +242,7 @@ To verify success, wait five minutes to give ELK time to start up.
 **REMEMBER**
 
 First 'cd /etc/ansible' to the play book
--To install elk run '[ansible-playbook install_elk.yml](https://github.com/cruzedcruz/Cybersecurity-Week-13/blob/main/Ansible/Playbook/Install-elk%20playbook.txt)' in the ansible file
--To install filebeat run 'ansible-playbook install_filebeat.yml'
--To install metricbeat run 'ansible-playbook install_metricbeat.yml'
+-To install elk run '[ansible-playbook install_elk.yml](https://github.com/cruzedcruz/Cybersecurity-Week-13/blob/main/Ansible/Playbook/Install-elk%20playbook.txt)' in the ansible file.
+-To install filebeat run '[ansible-playbook install_filebeat.yml](https://github.com/cruzedcruz/Cybersecurity-Week-13/blob/main/Ansible/Playbook/Filebeat%20playbook.txt)'.
+-To install metricbeat run '[ansible-playbook install_metricbeat.yml](https://github.com/cruzedcruz/Cybersecurity-Week-13/blob/main/Ansible/Playbook/Metricbeat%20playbook.txt)'.
 
