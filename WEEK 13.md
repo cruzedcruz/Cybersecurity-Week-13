@@ -237,7 +237,7 @@ After this, the commands below run the playbook:
 
 To verify success, wait five minutes to give ELK time to start up. 
 
-- Run the playbook, and navigate to the Kibana address run: `curl http://10.1.0.4:5601`. This is the address of Kibana. If the installation succeeded, this command should print HTML to the console. to check that the installation worked as expected.
+- Run the playbook, and navigate to the [Kibana](https://github.com/cruzedcruz/Cybersecurity-Week-13/blob/main/Linux/Kibana.PNG) address run: `curl http://10.1.0.4:5601`. This is the address of Kibana. If the installation succeeded, this command should print HTML to the console, to check that the installation worked as expected.
 
 **REMEMBER**
 
