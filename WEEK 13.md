@@ -209,7 +209,7 @@ $ cp Cybersecurity-Week-13/playbooks/* .
 
 This copies the playbook files to the correct place.
 
-Next, you must create a [host file](https://github.com/cruzedcruz/Cybersecurity-Week-13/blob/main/Linux/Host.PNG) to specify which VMs to run each playbook on. 
+Next, you must create a [hosts file](https://github.com/cruzedcruz/Cybersecurity-Week-13/blob/main/Linux/Host.PNG) to specify which VMs to run each playbook on. 
 
 Run the commands below:
 
@@ -237,7 +237,7 @@ After this, the commands below run the playbook:
 
 To verify success, wait five minutes to give ELK time to start up. 
 
-- Run the playbook, and navigate to the Kibana address run: `curl http://10.0.0.8:5601`. This is the address of Kibana. If the installation succeeded, this command should print HTML to the console. to check that the installation worked as expected.
+- Run the playbook, and navigate to the Kibana address run: `curl http://10.1.0.4:5601`. This is the address of Kibana. If the installation succeeded, this command should print HTML to the console. to check that the installation worked as expected.
 
 **REMEMBER**
 
